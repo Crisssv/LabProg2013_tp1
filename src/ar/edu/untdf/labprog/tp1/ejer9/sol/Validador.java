@@ -8,15 +8,17 @@
  *
  * Created on 30-mar-2012, 14:06:38
  */
-package ar.edu.untdf.labprog.tp1.ejer9;
+package ar.edu.untdf.labprog.tp1.ejer9.sol;
+
+import ar.edu.untdf.labprog.tp1.ejer9.*;
 
 /**
  *
  * @author Matias
  */
 public class Validador extends javax.swing.JFrame {
-
-    /** Creates new form Vlidador */
+private FieldValidator validar;
+    /** Creates new form Validador */
     public Validador() {
         initComponents();
     }
@@ -79,9 +81,14 @@ public class Validador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
+        validar= new FieldValidator("mail");
+        validar.validate(email.getText());
+        validar.setTipoCampo("documento");
+        validar.validate(documento.getText());
         System.out.println("campo email:"+email.getText()+"  campo documento: "+documento.getText());
     }//GEN-LAST:event_botonActionPerformed
 
+     
     /**
      * @param args the command line arguments
      */

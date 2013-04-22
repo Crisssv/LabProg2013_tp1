@@ -2,7 +2,7 @@
  * To change this template, chooose Tools | Templates
  * and open the template in  editor.
  */
-package ar.edu.untdf.labprog.tp1.ejer1;
+package ar.edu.untdf.labprog.tp1.ejer1.sol;
 
 /**
  *
@@ -10,6 +10,6 @@ package ar.edu.untdf.labprog.tp1.ejer1;
  */
 public interface Conn {
     public void connect();
-    public void query();
+    public void query(String q);
     
 }
